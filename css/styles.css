@@ -1,0 +1,415 @@
+:root {
+    --clr-white: #fff;
+    --clr-black: #000;
+    --clr-gray: #777;
+    --clr-red: #ea625c;
+    --font-family: "Roboto", "Arial", sans-serif;
+    --font-weight: 400;
+    --fw-bold: 700;
+    --fw-medium: 500;
+    --font-size: 15px;
+    --line-height: 150%;
+    --transition-time: 0.3s;
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+img {
+    display: block;
+    height: auto;
+}
+
+input {
+    border: none;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+.container {
+    width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.text-black {
+    color: var(--clr-black);
+}
+
+.text-white {
+    color: var(--clr-white);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw-medium {
+    font-weight: var(--fw-medium);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-danger {
+    padding: 12px 38px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--clr-white);
+    background-color: var(--clr-red);
+    transition: background var(--transition-time) ease;
+    -webkit-transition: background var(--transition-time) ease;
+    -moz-transition: background var(--transition-time) ease;
+    -ms-transition: background var(--transition-time) ease;
+    -o-transition: background var(--transition-time) ease;
+}
+
+.btn-danger:hover {
+    background-color: #c9514c;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+/* ********************** 
+    HEADER START
+   **********************
+*/
+
+.site-header {
+    padding-block-start: 30px;
+    padding-block-end: 80px;
+}
+
+.header-wrapper {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-inner {
+    align-items: center;
+}
+
+.sitenav {
+    margin-right: 40px;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.nav-link {
+    padding-bottom: 6px;
+    border-bottom: 3px solid transparent;
+    transition: border-color var(--transition-time) ease, opacity var(--transition-time) ease;
+    -webkit-transition: border-color var(--transition-time) ease, opacity var(--transition-time) ease;
+    -moz-transition: border-color var(--transition-time) ease, opacity var(--transition-time) ease;
+    -ms-transition: border-color var(--transition-time) ease, opacity var(--transition-time) ease;
+    -o-transition: border-color var(--transition-time) ease, opacity var(--transition-time) ease;
+}
+
+.nav-link:hover{
+    opacity: 0.6;
+    border-color: #333;
+}
+
+.input {
+    width: 153px;
+    padding-bottom: 6px;
+    outline-offset: 2px;
+    border-bottom: 1px solid #333333;
+}
+
+.input::placeholder {
+    text-align: center;
+    color: #666666;
+}
+
+/* ********************** 
+    HEADER END
+   **********************
+*/
+
+/* ********************** 
+    HERO START
+   **********************
+*/
+
+.hero {
+    padding-top: 110px;
+    padding-bottom: 183px;
+    background-image: url("../images/hero/intro-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 400px) top 25px;
+    border-bottom: 2px solid #888;
+}
+
+.hero-wrapper {
+    max-width: 490px;
+}
+
+.hero-title {
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 120%;
+}
+
+.hero-text {
+    margin-bottom: 30px;
+    padding-left: 40px;
+    color: var(--clr-gray);
+    border-left: 3px solid #888;
+}
+
+/* ********************** 
+    HERO END
+   **********************
+*/
+
+/* ********************** 
+    FEATURES START
+   **********************
+*/
+
+.features {
+    padding: 70px 0;
+}
+
+.features-item {
+    max-width: 280px;
+    height: fit-content;
+}
+
+.features-item:nth-child(2) {
+    margin: 0 80px;
+}
+
+.features-item-title {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #222222;
+}
+
+.features-item-text {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.features-item-span {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+}
+
+.features-item-span::before,
+.features-item-span::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+}
+
+.features-item-span::before {
+    position: absolute;
+    right: -10px;
+}
+
+.features-item-span::after {
+    position: absolute;
+    right: -20px;
+}
+
+.features-link {
+    display: flex;
+    align-items: center;
+    color: var(--clr-red);
+}
+
+
+.features-link::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: var(--clr-red);
+    transition: width var(--transition-time) ease;
+    -webkit-transition: width var(--transition-time) ease;
+    -moz-transition: width var(--transition-time) ease;
+    -ms-transition: width var(--transition-time) ease;
+    -o-transition: width var(--transition-time) ease;
+}
+
+.features-link:hover::before {
+    width: 60px;
+}
+
+
+
+.advertisement {
+    padding: 70px 0;
+}
+
+.advertisement-wrapper {
+    align-items: center;
+}
+
+.advertisement-content {
+    max-width: 400px;
+    margin-right: 110px;
+}
+
+.advertisement-title {
+    margin-bottom: 30px;
+    font-weight: var(--fw-bold);
+    font-size: 50px;
+    line-height: 120%;
+}
+
+.advertisement-text {
+    margin-bottom: 30px;
+    padding-left: 40px;
+    color: var(--clr-gray);
+    border-left: 3px solid var(--clr-gray);
+}
+
+.advertisement-link {
+    padding-inline: 90px;
+}
+
+
+
+
+
+
+
+.explore {
+    padding: 240px 0;
+    background-image: url("../images/runners\ 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.explore-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.explore-inner {
+    max-width: 490px;
+}
+
+.explore-title {
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 120%;
+    color: var(--clr-white);
+}
+
+.explore-text {
+    padding-left: 40px;
+    margin-bottom: 30px;
+    color: var(--clr-white);
+    border-left: 3px solid var(--clr-white);
+}
+
+
+
+.explore-link {
+    display: inline-block;
+}
